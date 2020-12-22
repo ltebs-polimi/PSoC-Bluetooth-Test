@@ -1,0 +1,25 @@
+# Created by https://www.gitignore.io/api/psoccreator
+
+### PSoCCreator ###
+# Project Settings
+*.cywrk.*
+*.cyprj.*
+
+# Generated Assets and Resources
+
+Docs/
+Release/
+Export/
+*/codegentemp
+*/CortexM3
+*/Generated_Source
+*_datasheet.pdf
+*_timing.html
+*.cycdx
+*.cyfit
+*.rpt
+*.svd
+*.log
+.*DS_Store
+
+# End of https://www.gitignore.io/api/psoccreator
