@@ -21,9 +21,9 @@
 #define HC06 1
 
 
-// Select your HC-05/06 device
-// #define BT_MODULE HC05
-#define BT_MODULE HC06
+// Select your HC-05/06 device by uncommenting the corresponding line only
+#define BT_MODULE HC05
+// #define BT_MODULE HC06
 
 int main(void)
 {
@@ -33,6 +33,10 @@ int main(void)
     UART_BT_Start();
     
     //UART_BT_PutString("AT");
+    
+    #ifndef BT_MODULE
+        return 0;
+    #endif
     
     #if BT_MODULE == HC05
         /* Uncomment *only one* of the following lines */
