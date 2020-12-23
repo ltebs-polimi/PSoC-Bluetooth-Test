@@ -1,17 +1,21 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
+ * @author Mattia Pesenti
+ * @date 22-dec-2020
  *
  * ========================================
 */
 
 /*
- * UART_BT communication test
+ * BT_ATMODE | HC-05/HC-06 configuration
+ *
+ * 1. Make sure your HC device is in AT Mode
+ * 2. Program the Device with the HC-05/HC-06 connected
+ * Hardware connections: HC-05/06 TX --> PSoC RX (12.6)
+ *                       HC-05/06 RX --> PSoC TX (12.7)
+ * The AT command is sent immediately after programming
+ * You can switch to the project BT_UART for testing 
+ * You *do not* need bluetooth connection for this step
 */
 
 #include "project.h"
@@ -19,7 +23,6 @@
 
 #define HC05 0
 #define HC06 1
-
 
 // Select your HC-05/06 device by uncommenting the corresponding line only
 #define BT_MODULE HC05
@@ -60,16 +63,6 @@ int main(void)
                 break;     
         }
     #endif
-    
-    
-    /* 
-     * 1. Make sure your HC device is in AT Mode 
-     * 2. Program the Device with the HC-05/HC-06 connected
-     * Hardware connections: HC-05/06 TX --> PSoC RX (12.6)
-     *                          HC-05/06 RX --> PSoC TX (12.7)
-     * The AT command is sent immediately after programming
-     * You can switch to the project BT_UART for testing 
-    */
     
     
     for(;;)
