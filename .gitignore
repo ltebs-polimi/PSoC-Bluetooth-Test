@@ -12,6 +12,8 @@ Release/
 Export/
 */codegentemp
 */CortexM3
+*/CortexM0p
+*/CortexM4
 */Generated_Source
 *_datasheet.pdf
 *_timing.html
