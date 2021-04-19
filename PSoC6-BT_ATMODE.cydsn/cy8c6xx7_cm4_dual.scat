@@ -4,7 +4,7 @@
 
 ;*******************************************************************************
 ;* \file cy8c6xx7_cm4_dual.scat
-;* \version 2.10
+;* \version 2.20
 ;*
 ;* Linker file for the ARMCC.
 ;*
@@ -119,7 +119,7 @@ LR_FLASH FLASH_START FLASH_SIZE
 
 
     ; Used for the digital signature of the secure application and the
-    ; Bootloader SDK appication. The size of the section depends on the required
+    ; Bootloader SDK application. The size of the section depends on the required
     ; data size.
     .cy_app_signature (FLASH_START + FLASH_SIZE - 256) 256
     {

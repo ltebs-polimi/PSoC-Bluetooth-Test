@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file stdio_user.c
-* \version 1.10
+* \version 1.20
 *
 * \brief
 * This file provides low level function implementation to retarget
@@ -15,10 +15,6 @@
 *******************************************************************************/
 
 #include "stdio_user.h"
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
 
 #if defined (IO_STDOUT_ENABLE) && defined (IO_STDOUT_UART)
 /*******************************************************************************
@@ -65,9 +61,5 @@ uint32_t STDIO_GetChar(void)
     return (Cy_SCB_UART_Get(IO_STDIN_UART));
 }
 #endif /* IO_STDIN_ENABLE && IO_STDIN_UART */
-
-#if defined(__cplusplus)
-}
-#endif
 
 /* [] END OF FILE */

@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy8c6xx7_cm4_dual.ld
-* \version 2.10
+* \version 2.20
 *
 * Linker file for the GNU C compiler.
 *
@@ -163,7 +163,7 @@ SECTIONS
 
     /* To copy multiple ROM to RAM sections,
      * uncomment .copy.table section and,
-     * define __STARTUP_COPY_MULTIPLE in startup_psoc63_cm4.S */
+     * define __STARTUP_COPY_MULTIPLE in startup_psoc6_01_cm4.S */
     .copy.table :
     {
         . = ALIGN(4);
@@ -185,7 +185,7 @@ SECTIONS
 
     /* To clear multiple BSS sections,
      * uncomment .zero.table section and,
-     * define __STARTUP_CLEAR_BSS_MULTIPLE in startup_psoc63_cm4.S */
+     * define __STARTUP_CLEAR_BSS_MULTIPLE in startup_psoc6_01_cm4.S */
     .zero.table :
     {
         . = ALIGN(4);
@@ -306,7 +306,7 @@ SECTIONS
     ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack")
 
 
-    /* Used for the digital signature of the secure application and the Bootloader SDK appication.
+    /* Used for the digital signature of the secure application and the Bootloader SDK application.
     * The size of the section depends on the required data size. */
     .cy_app_signature ORIGIN(flash) + LENGTH(flash) - 256 :
     {

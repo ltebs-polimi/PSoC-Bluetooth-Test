@@ -4,7 +4,7 @@
 
 ;*******************************************************************************
 ;* \file cy8c6xx7_cm0plus.scat
-;* \version 2.10
+;* \version 2.20
 ;*
 ;* Linker file for the ARMCC.
 ;*

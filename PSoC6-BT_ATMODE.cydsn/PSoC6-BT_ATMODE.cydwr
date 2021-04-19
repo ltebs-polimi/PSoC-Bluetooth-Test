@@ -6,8 +6,10 @@
   <Data key="DataVersionKey" value="2" />
   <Group key="DWRInstGuidMapping">
     <Group key="Pin">
-      <Data key="99842fb9-44e0-4dee-8444-aed7634935a1/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f" value="UART_tx" />
-      <Data key="99842fb9-44e0-4dee-8444-aed7634935a1/b7e8018e-1ef7-49c0-b5a5-61641a03e31c" value="UART_rx" />
+      <Data key="94209ddf-90ff-4a60-a568-a7744837dc14/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f" value="UART_Debug_tx" />
+      <Data key="94209ddf-90ff-4a60-a568-a7744837dc14/b7e8018e-1ef7-49c0-b5a5-61641a03e31c" value="UART_Debug_rx" />
+      <Data key="99842fb9-44e0-4dee-8444-aed7634935a1/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f" value="UART_BT_tx" />
+      <Data key="99842fb9-44e0-4dee-8444-aed7634935a1/b7e8018e-1ef7-49c0-b5a5-61641a03e31c" value="UART_BT_rx" />
     </Group>
   </Group>
   <Group key="M0S8Clock">
@@ -595,16 +597,27 @@
     </Group>
   </Group>
   <Group key="Pin2">
-    <Group key="99842fb9-44e0-4dee-8444-aed7634935a1/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f">
+    <Group key="94209ddf-90ff-4a60-a568-a7744837dc14/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f">
       <Group key="0">
         <Data key="Port Format" value="5,1" />
       </Group>
     </Group>
-    <Group key="99842fb9-44e0-4dee-8444-aed7634935a1/b7e8018e-1ef7-49c0-b5a5-61641a03e31c">
+    <Group key="94209ddf-90ff-4a60-a568-a7744837dc14/b7e8018e-1ef7-49c0-b5a5-61641a03e31c">
       <Group key="0">
         <Data key="Port Format" value="5,0" />
       </Group>
     </Group>
+    <Group key="99842fb9-44e0-4dee-8444-aed7634935a1/65f3af6c-759b-4ccb-8c66-5c95ba1f5f4f">
+      <Group key="0">
+        <Data key="Port Format" value="6,5" />
+      </Group>
+    </Group>
+    <Group key="99842fb9-44e0-4dee-8444-aed7634935a1/b7e8018e-1ef7-49c0-b5a5-61641a03e31c">
+      <Group key="0">
+        <Data key="Port Format" value="6,4" />
+      </Group>
+    </Group>
+    <Group key="UnAssigned Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />

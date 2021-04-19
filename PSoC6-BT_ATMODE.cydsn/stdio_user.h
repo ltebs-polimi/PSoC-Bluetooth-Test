@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file stdio_user.h
-* \version 1.10
+* \version 1.20
 *
 * \brief
 * This file provides configuration macros and function prototypes to retarget
@@ -14,10 +14,10 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#ifndef _STDIO_USER_H_
-#define _STDIO_USER_H_
+#ifndef STDIO_USER_H
+#define STDIO_USER_H
 /**
-* \defgroup group_retarget_io Retarget I/O (printf/scanf)
+* \addtogroup group_retarget_io
 * \{
 * Retarget the I/O functions of the standard C run-time library to the user-defined target.
 * 
@@ -47,6 +47,13 @@
 * list, click OK and build the project. The Retarget I/O source files are
 * added to your project and are available for modification.
 * ![Figure 1. Build Settings dialog in PSoC Creator](retarget_io_build_settings.png)
+*
+* For ModusToolbox, create or open existing ModusToolbox project. Open 
+* Middleware Selector (<b>Project</b> > <b>ModusToolbox Middleware Selector</b>), 
+* select Retarget I/O item, and click OK (see the screenshot below). 
+* The Retarget I/O source files are added to your project and are available for 
+* modification.  
+* ![Figure 2. Middleware Selector dialog in ModusToolbox](retarget_io_middleware_selector.png) 
 *
 * There are multiple serial communication blocks (SCB) available. By default
 * the Retarget I/O files use SCB0. The stdio_user.h file defines these macros:
@@ -134,6 +141,11 @@
 * <table class="doxtable">
 * <tr><th>Version</th><th>Changes</th><th>Reason for Change</th></tr>
 * <tr>
+* <td>1.20</td>
+* <td>Changed include path for cy_scb_uart.h to reflect the PDL source code structure</td> 
+* <td></td>
+* </tr>
+* <tr>
 * <td>1.10</td>
 * <td>Added STDIN support</td> 
 * <td></td>
@@ -152,12 +164,12 @@
 /* Must remain uncommented to use this utility */
 #define IO_STDOUT_ENABLE
 #define IO_STDIN_ENABLE
-#define IO_STDOUT_UART      UART_HW
-#define IO_STDIN_UART       UART_HW
+#define IO_STDOUT_UART      UART_Debug_HW
+#define IO_STDIN_UART       UART_Debug_HW
 
 #if defined(IO_STDOUT_ENABLE) || defined(IO_STDIN_ENABLE)
 #if defined(IO_STDOUT_UART) || defined(IO_STDIN_UART)
-#include "scb/cy_scb_uart.h"
+#include "cy_scb_uart.h"
 #endif /* IO_STDOUT_UART || IO_STDIN_UART */
 #endif /* IO_STDOUT_ENABLE || IO_STDIN_ENABLE */
 
@@ -182,7 +194,7 @@ uint32_t STDIO_GetChar(void);
 }
 #endif
 
-#endif /* _STDIO_USER_H_ */
+#endif /* STDIO_USER_H */
 
 
 /* [] END OF FILE */

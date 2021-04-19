@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy8c6xx7_cm0plus.ld
-* \version 2.10
+* \version 2.20
 *
 * Linker file for the GNU C compiler.
 *
@@ -166,7 +166,7 @@ SECTIONS
 
     /* To copy multiple ROM to RAM sections,
      * uncomment .copy.table section and,
-     * define __STARTUP_COPY_MULTIPLE in startup_psoc63_cm0plus.S */
+     * define __STARTUP_COPY_MULTIPLE in startup_psoc6_01_cm0plus.S */
     .copy.table :
     {
         . = ALIGN(4);
@@ -188,7 +188,7 @@ SECTIONS
 
     /* To clear multiple BSS sections,
      * uncomment .zero.table section and,
-     * define __STARTUP_CLEAR_BSS_MULTIPLE in startup_psoc63_cm0plus.S */
+     * define __STARTUP_CLEAR_BSS_MULTIPLE in startup_psoc6_01_cm0plus.S */
     .zero.table :
     {
         . = ALIGN(4);
